@@ -13,11 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/', 'HomeController@index');
+// Route::get('home', 'HomeController@index')->name('home');
+
+Route::get('product-review', 'ProductReviewController@index')->name('product-review');
+Route::get('product-review/detail/{id}', 'ProductReviewController@detail')->name('product-review');
+
+Route::get('article', 'ArticleController@index')->name('article');
+Route::get('article/detail/{id}', 'ArticleController@detail');
+
+Route::get('testimonial', 'TestimonialController@index')->name('testimonial');
+
+Route::get('contact', 'ContactController@index')->name('contact');
+Route::post('contact/save', 'ContactController@save');
