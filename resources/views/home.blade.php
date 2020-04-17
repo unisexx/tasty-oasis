@@ -29,6 +29,37 @@
 </div>
 <!--############################### Carousel ###############################-->
 
+<!--############################### Product ###############################-->
+<div class="service mt-8">
+    <div class="text-center"><span class="title-service1">สินค้า</span> <span class="title-service2">ของเรา</span></div>
+    <div class="container mt-5">
+        <div class="row">
+            @foreach($products as $product)
+            <div class="col-md-4 w-768">
+                <div class="card z-depth-1">
+                    <div class="view overlay">
+                        <img src="{{ asset('storage/'.$product->image) }}" class="img-fluid" alt="smaple image">
+                        <div class="mask flex-center rgba-red-strong">
+                            <a class="more-text" href="{{ url('product-review/detail/'.$product->id) }}">อ่านเพิ่มเติม ></a>
+                        </div>
+                    </div>
+                    <div class="card-service">
+                        <h4>{{ $product->name }}</h4>
+                        <p class="card-text-service">{{ $product->body }}</p>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="btn-all-service mt-2">
+            <hr class="line-01">
+            <a href="{{ url('product') }}" class="text-allservice">ดูทั้งหมด</a>
+            <hr class="line-01">
+        </div>
+    </div>
+</div>
+<!--############################### Product ###############################-->
+
 <!--############################### testimonial ###############################-->
 <div class="testimonial mt-8">
     <div class="text-center"><span class="title-service1">เสียงจาก</span> <span class="title-service2">ลูกค้า</span>

@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductCategory extends Model
 {
-    // public function parentId()
+    // public function product()
     // {
-    //     return $this->belongsTo(self::class);
+    //     return $this->hasMany('App\Product')->orderBy('id', 'desc');
     // }
 }

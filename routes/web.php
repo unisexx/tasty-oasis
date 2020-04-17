@@ -26,6 +26,7 @@ Route::get('/', 'HomeController@index');
 
 Route::get('about', 'AboutController@index');
 
+Route::get('product', 'ProductController@index');
 Route::get('product/category/{id}', 'ProductController@category');
 Route::get('product/detail/{id}', 'ProductController@detail');
 
@@ -36,6 +37,8 @@ Route::get('article', 'ArticleController@index');
 Route::get('article/detail/{id}', 'ArticleController@detail');
 
 Route::get('testimonial', 'TestimonialController@index');
+
+Route::get('doctor/profile/{id}', 'DoctorController@profile');
 
 Route::get('contact', 'ContactController@index');
 Route::post('contact/save', 'ContactController@save');
