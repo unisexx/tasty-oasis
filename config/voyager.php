@@ -190,6 +190,8 @@ return [
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
         //'css/custom.css',
+        'https://pro.fontawesome.com/releases/v5.2.0/css/all.css',
+        'https://static.fontawesome.com/css/fontawesome-app.css',
     ],
 
     'additional_js' => [

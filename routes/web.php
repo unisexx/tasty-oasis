@@ -40,5 +40,8 @@ Route::get('testimonial', 'TestimonialController@index');
 
 Route::get('doctor/profile/{id}', 'DoctorController@profile');
 
+Route::get('promotion', 'PromotionController@index');
+Route::get('promotion/detail/{id}', 'PromotionController@detail');
+
 Route::get('contact', 'ContactController@index');
 Route::post('contact/save', 'ContactController@save');
