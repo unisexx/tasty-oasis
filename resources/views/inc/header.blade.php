@@ -1,5 +1,6 @@
 @php
     $contact = App\Contact::firstOrFail();
+    $product_categories = App\ProductCategory::orderBy('id','asc')->get();
 @endphp
 
 <section class="bg-top p-2">
@@ -82,8 +83,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="promotions.html">โปรโมชั่น</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="products.html">สินค้า</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                สินค้า
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @foreach ($product_categories as $product_category)
+                                    <a class="dropdown-item" href="{{ url('product/category/'.$product_category->id) }}">{{ $product_category->name }}</a>
+                                @endforeach
+                            </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

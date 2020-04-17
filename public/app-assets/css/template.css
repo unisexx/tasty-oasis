@@ -23,8 +23,8 @@ a .space-font:hover {color: #007bff !important; text-decoration: none!important;
 .text-flag{color: black !important;}
 /* Topmenu */
 .topmenu {margin-top:-5px;margin-bottom: -10px;}
-.topmenu ul li .nav-link {color: rgba(0,0,0,1) !important; font-size: 1.1em;padding-left: 0.7em !important;
-    padding-right: 0.7em !important; margin: 6px; font-weight: normal;}
+.topmenu ul li .nav-link {color: rgba(0,0,0,1) !important; font-size: 1.1em;padding-left: 0.6em !important;
+    padding-right: 0.6em !important; margin: 6px; font-weight: normal;}
 .topmenu .active>.nav-link {background-color:#7e6f6d; color:white !important;padding-right: 10px; }
 .dropdown-toggle::before {display: none;}
 .dropdown-toggle::after {border:0; display: inline-block; font: normal normal normal 10px/1 FontAwesome;  content: "\f078";}

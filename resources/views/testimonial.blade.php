@@ -17,23 +17,25 @@
 <div class="container pt-3">
     <div class="title-page pb-5">เสียงจากลูกค้า</div>
 </div>
+
 <div class="container mt-3">
-    <div class="row justify-content-center">
-        @foreach($testimonials as $testimonial)
-        <div class="col-md-3 card noborder text-center">
-            <div class="size-img mb-3">
-                <img src="{{ asset('storage/'.$testimonial->image) }}" alt="" class="rounded-circle img-fluid ">
+@foreach($testimonials->chunk(4) as $key => $chunk)
+    <div class="row justify-content-center {{ $key != 0 ? 'mt-5' : '' }}">
+        @foreach($chunk as $testimonial)
+            <div class="col-md-3 card noborder text-center">
+                <div class="size-img mb-3">
+                    <img src="{{ asset('storage/'.$testimonial->image) }}" alt="" class="rounded-circle img-fluid ">
+                </div>
+                <div class="name-test">{{ $testimonial->name }}</div>
+                <hr class="line-test mx-auto">
+                <p>{{ $testimonial->review }}</p>
             </div>
-            <div class="name-test">{{ $testimonial->name }}</div>
-            <hr class="line-test mx-auto">
-            <p>{{ $testimonial->review }}</p>
-        </div>
-        @endforeach
+        @endforeach 
     </div>
+@endforeach
 </div>
 
 {!! $testimonials->appends(@$_GET)->render() !!}
-
 <!--############################### Content ###############################-->
 
 @endsection

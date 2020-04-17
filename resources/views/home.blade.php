@@ -29,4 +29,59 @@
 </div>
 <!--############################### Carousel ###############################-->
 
+<!--############################### testimonial ###############################-->
+<div class="testimonial mt-8">
+    <div class="text-center"><span class="title-service1">เสียงจาก</span> <span class="title-service2">ลูกค้า</span>
+    </div>
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            @foreach($testimonials as $testimonial)
+            <div class="col-md-3 card noborder text-center m-4">
+                <div class="size-img mb-3">
+                    <img src="{{ asset('storage/'.$testimonial->image) }}" alt="" class="rounded-circle">
+                </div>
+                <div class="name-test">{{ $testimonial->name }}</div>
+                <hr class="line-test mx-auto">
+                <p>{{ $testimonial->review }}</p>
+            </div>
+            @endforeach
+        </div>
+        <div class="btn-all-service btn-test">
+            <hr class="line-01">
+            <a href="{{ url('testimonial') }}" class="text-allservice">ดูทั้งหมด</a>
+            <hr class="line-01">
+        </div>
+    </div>
+</div>
+<!--############################### testimonial ###############################-->
+
+<!--############################### doctor ###############################-->
+<div class="doctor bg-doctor mt-5 pb-5">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-6">
+                <div class="title-doctor">แพทย์ผู้เชี่ยวชาญ</div>
+                <p class="name-doctor">{{ $doctor->name }}</p>
+                <span class="title-education">การศึกษา</span>
+                <div class="education">
+                    {!! $doctor->education !!}
+                </div>
+                <p class="education"><span class="title-education">ประสบการณ์ :</span> 
+                    {!! $doctor->experience !!}
+                </p>
+                <a class="btn-doctor" href="{{ url('doctor/profile/'. $doctor->id) }}">อ่านเพิ่มเติม ></a>
+            </div>
+            <div class="col-md-6 frame-doctor">
+                <img src="{{ asset('storage/'.$doctor->image) }}" alt="" class="img-fluid mx-auto my-auto">
+            </div>
+        </div>
+
+    </div>
+    <!-- start flower -->
+    <div class="flower">
+    </div>
+    <!-- end flower -->
+</div>
+<!--############################### doctor ###############################-->
+
 @endsection

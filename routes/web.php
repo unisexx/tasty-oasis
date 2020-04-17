@@ -23,15 +23,19 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/', 'HomeController@index');
-// Route::get('home', 'HomeController@index')->name('home');
 
-Route::get('product-review', 'ProductReviewController@index')->name('product-review');
-Route::get('product-review/detail/{id}', 'ProductReviewController@detail')->name('product-review');
+Route::get('about', 'AboutController@index');
 
-Route::get('article', 'ArticleController@index')->name('article');
+Route::get('product/category/{id}', 'ProductController@category');
+Route::get('product/detail/{id}', 'ProductController@detail');
+
+Route::get('product-review', 'ProductReviewController@index');
+Route::get('product-review/detail/{id}', 'ProductReviewController@detail');
+
+Route::get('article', 'ArticleController@index');
 Route::get('article/detail/{id}', 'ArticleController@detail');
 
-Route::get('testimonial', 'TestimonialController@index')->name('testimonial');
+Route::get('testimonial', 'TestimonialController@index');
 
-Route::get('contact', 'ContactController@index')->name('contact');
+Route::get('contact', 'ContactController@index');
 Route::post('contact/save', 'ContactController@save');
