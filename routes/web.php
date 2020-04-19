@@ -18,13 +18,19 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
+// SET LANGUAGE
+Route::get('change/{locale}', function ($locale) {
+    Session::put('locale', $locale);
+    return Redirect::back();
 });
+
 
 Route::get('/', 'HomeController@index');
 
 Route::get('about', 'AboutController@index');
+
+Route::get('surgery', 'SurgeryController@index');
+Route::get('surgery/detail/{id}', 'SurgeryController@detail');
 
 Route::get('product', 'ProductController@index');
 Route::get('product/category/{id}', 'ProductController@category');
@@ -49,3 +55,8 @@ Route::get('promotion/detail/{id}', 'PromotionController@detail');
 
 Route::get('contact', 'ContactController@index');
 Route::post('contact/save', 'ContactController@save');
+
+// BACKEND
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

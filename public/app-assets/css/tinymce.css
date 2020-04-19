@@ -278,3 +278,9 @@
 .text-left {
     text-align: left!important;
 }
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}

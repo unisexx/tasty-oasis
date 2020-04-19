@@ -22,10 +22,11 @@ function tinymce_init_callback(editor)
                     $('#upload_file').trigger('click');
                 }
             },
-        toolbar: 'styleselect bold italic underline | forecolor backcolor | alignleft aligncenter alignright | bullist numlist outdent indent | link image table | visualblocks | hr  clearFloat accordion | code',
+        toolbar: 'styleselect bold italic underline | forecolor backcolor | alignleft aligncenter alignright | bullist numlist outdent indent | link image table | visualblocks | hr  ClearFloat Accordion DivBlock | code',
         convert_urls: false,
         image_caption: true,
         image_title: true,
+        image_advtab: true,
         // style_formats: [
         //     { title: 'Headers', items: [
         //     { title: 'h1', block: 'h1' },
@@ -53,21 +54,21 @@ function tinymce_init_callback(editor)
         //     { title: 'Image Right', selector: 'img', styles: { 'float': 'right', 'margin': '0 0 10px 10px' } },
         //     ] }
         // ],
-        visualblocks_default_state: false,
+        visualblocks_default_state: true,
         end_container_on_empty_block: true,
         setup: function (editor) {
 
             // ปุ่ม clearfloat
-            editor.addButton('clearFloat', {
-                title : 'Clear Float',
-                text : 'Clear Float',
+            editor.addButton('ClearFloat', {
+                title : 'ClearFloat',
+                text : 'ClearFloat',
                 onclick : function() {
                     tinyMCE.execCommand('mceInsertContent',false, '<br clear="all">'); 
                 }
             });
 
             // ปุ่ม accordion
-            editor.addButton('accordion', {
+            editor.addButton('Accordion', {
                 text: 'Accordion',
                 icon: false,
                 onclick: function onclick() {
@@ -108,12 +109,6 @@ function tinymce_init_callback(editor)
                             html += '</div>';
                         html += '</div>';
 
-
-                        // html += '<a class="card-link" href="#collapse' + (curAccordion + i) + '" data-toggle="collapse"> หัวข้อที่ '+ (i+1) +' </a>';
-                        // html += '</div>';
-                        // html += '<div id="collapse' + (curAccordion + i) + '" class="collapse ' + classShow + '" data-parent="#accordion' + curAccordion + '">';
-                        // html += '<div class="card-body">เนื้อหาที่ '+ (i+1) +'</div>';
-                        // html += '</div></div>';
                         accordionSet.push(html);
                     }
 
@@ -121,6 +116,15 @@ function tinymce_init_callback(editor)
                     editor.insertContent(accordion);
                     }
                 });
+                }
+            });
+
+            // ปุ่ม Add <Section></Section>
+            editor.addButton('DivBlock', {
+                title : 'DivBlock',
+                text : 'DivBlock',
+                onclick : function() {
+                    tinyMCE.execCommand('mceInsertContent',false, '<div class="clearfix" style="margin:20px 0;"><p>ใส่เนื้อหาที่นี่</p></div><p></p>');
                 }
             });
         }

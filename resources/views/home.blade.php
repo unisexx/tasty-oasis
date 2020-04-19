@@ -29,6 +29,47 @@
 </div>
 <!--############################### Carousel ###############################-->
 
+<!--############################### Responsive Image Grid ###############################-->
+<!-- Grid row -->
+<div class="container mt-5">
+    <div class="gallery">
+        <div id="pic1">
+            <div class="text-pro-one">
+                <p class="text-pro1">NOSE</p>
+                <p class="text-pro2">SURGERY</p>
+                <p class="text-more"><a href="{{ url('surgery/detail/1') }}">อ่านเพิ่มเติม ></a></p>
+            </div>
+            <img src="{{ asset('app-assets/images/card001.jpg') }}">
+        </div>
+        <div id="pic2">
+            <div class="text-pro-two">
+                <p class="text-pro1">BREAST IMPLANT</p>
+                <p class="text-more"><a href="{{ url('surgery/detail/4') }}">อ่านเพิ่มเติม ></a></p>
+            </div>
+            <img src="{{ asset('app-assets/images/card002.jpg') }}">
+        </div>
+        <div id="pic3">
+            <div class="text-pro-three">
+                <p class="text-pro1">BODY</p>
+                <p class="text-pro2">SURGERY</p>
+                <p class="text-more"><a href="{{ url('surgery/detail/5') }}">อ่านเพิ่มเติม ></a></p>
+            </div>
+            <img src="{{ asset('app-assets/images/card003.jpg') }}">
+        </div>
+        <div id="pic4">
+            <div class="text-pro-four">
+                <p class="text-pro1">MICROFAT</p>
+                <p class="text-pro2">&</p>
+                <p class="text-pro2">STEMCELL</p>
+                <p class="text-more"><a href="{{ url('surgery/detail/6') }}">อ่านเพิ่มเติม ></a></p>
+            </div>
+            <img src="{{ asset('app-assets/images/card004.jpg') }}">
+        </div>
+    </div>
+</div>
+<!-- Grid row -->
+<!--############################### Responsive Image Grid ###############################-->
+
 <!--############################### Product ###############################-->
 <div class="service mt-8">
     <div class="text-center"><span class="title-service1">สินค้า</span> <span class="title-service2">ของเรา</span></div>

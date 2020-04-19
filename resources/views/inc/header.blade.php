@@ -1,5 +1,6 @@
 @php
     $contact = App\Contact::firstOrFail();
+    $surgeries = App\Surgery::where('status', 1)->orderBy('order','asc')->get();
     $product_categories = App\ProductCategory::orderBy('order','asc')->get();
     $skincare_categories = App\SkincareCategory::orderBy('order','asc')->get();
 @endphp
@@ -22,14 +23,31 @@
                 <nav class="navbar navbar-expand-lg navbar-dark bg-none rounded flag">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-flag" href="th#" id="dropdown-flag"
+                            @if(App::isLocale('th'))
+                            <a class="nav-link dropdown-toggle text-flag" href="{{ url('change/th') }}" id="dropdown-flag"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
                                     class="flag-icon flag-icon-th"> </span> Thai</a>
+                            @endif
+                            @if(App::isLocale('en'))
+                            <a class="nav-link dropdown-toggle text-flag" href="{{ url('change/en') }}" id="dropdown-flag"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                    class="flag-icon flag-icon-us"> </span> English</a>
+                            @endif
+                            @if(App::isLocale('cn'))
+                            <a class="nav-link dropdown-toggle text-flag" href="{{ url('change/cn') }}" id="dropdown-flag"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                    class="flag-icon flag-icon-cn"> </span> China</a>
+                            @endif
                             <div class="dropdown-menu" aria-labelledby="dropdown-flag">
-                                <a class="dropdown-item" href="#gb"><span class="flag-icon flag-icon-gb"> </span>
-                                    English</a>
-                                <a class="dropdown-item" href="#cn"><span class="flag-icon flag-icon-cn"> </span>
-                                    China</a>
+                                @if(!App::isLocale('th'))
+                                    <a class="dropdown-item" href="{{ url('change/th') }}"><span class="flag-icon flag-icon-th"> </span> Thai</a>
+                                @endif
+                                @if(!App::isLocale('en'))
+                                    <a class="dropdown-item" href="{{ url('change/en') }}"><span class="flag-icon flag-icon-us"> </span> English</a>
+                                @endif
+                                @if(!App::isLocale('cn'))
+                                    <a class="dropdown-item" href="{{ url('change/cn') }}"><span class="flag-icon flag-icon-cn"> </span> China</a>
+                                @endif
                             </div>
                         </li>
                     </ul>
@@ -56,19 +74,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ url('') }}">หน้าหลัก <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ url('') }}">@lang('Home') <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('about') }}">เกี่ยวกับเรา</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="" onclick="location.href='surgery.html'"
+                            <a class="nav-link dropdown-toggle" href="#" onclick="location.href='{{ url('surgery') }}'"
                                 id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 ศัลยกรรมตกแต่ง
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="surgery_detail.html">ศัลยกรรมจมูก</a>
+                                @foreach ($surgeries as $surgery)
+                                    <a class="dropdown-item" href="{{ url('surgery/detail/'.$surgery->id) }}">{{ $surgery->title }}</a>
+                                @endforeach
                             </div>
                         </li>
                         <li class="nav-item dropdown">
