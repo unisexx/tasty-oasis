@@ -77,13 +77,13 @@
                             <a class="nav-link" href="{{ url('') }}">@lang('Home') <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('about') }}">เกี่ยวกับเรา</a>
+                            <a class="nav-link" href="{{ url('about') }}">@lang('About Us')</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" onclick="location.href='{{ url('surgery') }}'"
                                 id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
-                                ศัลยกรรมตกแต่ง
+                                @lang('Surgery')
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @foreach ($surgeries as $surgery)
@@ -95,7 +95,7 @@
                             <a class="nav-link dropdown-toggle" href="#" onclick="location.href='{{ url('skincare') }}'"
                                 id="navbar2Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
-                                ดูแลผิวพรรณ
+                                @lang('Skincare')
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbar2Dropdown">
                                 @foreach ($skincare_categories as $skincare_category)
@@ -104,12 +104,12 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('promotion') }}">โปรโมชั่น</a>
+                            <a class="nav-link" href="{{ url('promotion') }}">@lang('Promotion')</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                สินค้า
+                                @lang('Product')
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @foreach ($product_categories as $product_category)
@@ -120,7 +120,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                บทความและรีวิว
+                                @lang('Review')
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ url('article') }}">บทความที่น่าสนใจ</a>
@@ -128,10 +128,10 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('testimonial') }}">เสียงจากลูกค้า</a>
+                            <a class="nav-link" href="{{ url('testimonial') }}">@lang('Testimonial')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('contact') }}">ติดต่อเรา</a>
+                            <a class="nav-link" href="{{ url('contact') }}">@lang('Contact')</a>
                         </li>
                     </ul>
                 </div>

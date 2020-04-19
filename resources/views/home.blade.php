@@ -37,14 +37,14 @@
             <div class="text-pro-one">
                 <p class="text-pro1">NOSE</p>
                 <p class="text-pro2">SURGERY</p>
-                <p class="text-more"><a href="{{ url('surgery/detail/1') }}">อ่านเพิ่มเติม ></a></p>
+                <p class="text-more"><a href="{{ url('surgery/detail/1') }}">@lang('Read More')</a></p>
             </div>
             <img src="{{ asset('app-assets/images/card001.jpg') }}">
         </div>
         <div id="pic2">
             <div class="text-pro-two">
                 <p class="text-pro1">BREAST IMPLANT</p>
-                <p class="text-more"><a href="{{ url('surgery/detail/4') }}">อ่านเพิ่มเติม ></a></p>
+                <p class="text-more"><a href="{{ url('surgery/detail/4') }}">@lang('Read More')</a></p>
             </div>
             <img src="{{ asset('app-assets/images/card002.jpg') }}">
         </div>
@@ -52,7 +52,7 @@
             <div class="text-pro-three">
                 <p class="text-pro1">BODY</p>
                 <p class="text-pro2">SURGERY</p>
-                <p class="text-more"><a href="{{ url('surgery/detail/5') }}">อ่านเพิ่มเติม ></a></p>
+                <p class="text-more"><a href="{{ url('surgery/detail/5') }}">@lang('Read More')</a></p>
             </div>
             <img src="{{ asset('app-assets/images/card003.jpg') }}">
         </div>
@@ -61,7 +61,7 @@
                 <p class="text-pro1">MICROFAT</p>
                 <p class="text-pro2">&</p>
                 <p class="text-pro2">STEMCELL</p>
-                <p class="text-more"><a href="{{ url('surgery/detail/6') }}">อ่านเพิ่มเติม ></a></p>
+                <p class="text-more"><a href="{{ url('surgery/detail/6') }}">@lang('Read More')</a></p>
             </div>
             <img src="{{ asset('app-assets/images/card004.jpg') }}">
         </div>
@@ -72,7 +72,7 @@
 
 <!--############################### Product ###############################-->
 <div class="service mt-8">
-    <div class="text-center"><span class="title-service1">สินค้า</span> <span class="title-service2">ของเรา</span></div>
+    <div class="text-center">@lang('Our Product')</div>
     <div class="container mt-5">
         <div class="row">
             @foreach($products as $product)
@@ -94,7 +94,7 @@
         </div>
         <div class="btn-all-service mt-2">
             <hr class="line-01">
-            <a href="{{ url('product') }}" class="text-allservice">ดูทั้งหมด</a>
+            <a href="{{ url('product') }}" class="text-allservice">@lang('View All')</a>
             <hr class="line-01">
         </div>
     </div>
@@ -120,7 +120,7 @@
         </div>
         <div class="btn-all-service btn-test">
             <hr class="line-01">
-            <a href="{{ url('testimonial') }}" class="text-allservice">ดูทั้งหมด</a>
+            <a href="{{ url('testimonial') }}" class="text-allservice">@lang('View All')</a>
             <hr class="line-01">
         </div>
     </div>
@@ -141,7 +141,7 @@
                 <p class="education"><span class="title-education">ประสบการณ์ :</span> 
                     {!! $doctor->experience !!}
                 </p>
-                <a class="btn-doctor" href="{{ url('doctor/profile/'. $doctor->id) }}">อ่านเพิ่มเติม ></a>
+                <a class="btn-doctor" href="{{ url('doctor/profile/'. $doctor->id) }}">@lang('Read More')</a>
             </div>
             <div class="col-md-6 frame-doctor">
                 <img src="{{ asset('storage/'.$doctor->image) }}" alt="" class="img-fluid mx-auto my-auto">

@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
 use App\Contact;
 use App\Message;
+use App;
 
 class ContactController extends Controller
 {
     public function index()
     {
-        $contact = Contact::firstOrFail();
+        $contact = Contact::with('translations')->firstOrFail();
+        $contact = $contact->translate(App::getLocale(), 'th');
         return view('contact', compact('contact'));
     }
 

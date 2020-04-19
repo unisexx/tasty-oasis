@@ -1,3 +1,15 @@
 {
-  "Home": "Home"
+  "Home"     : "Home",
+  "About Us" : "About Us",
+  "Surgery"  : "Surgery",
+  "Skincare" : "Skincare",
+  "Promotion": "Promotion",
+  "Product"  : "Product",
+  "Review"  : "Article & Review",
+  "Testimonial" : "Testimonial",
+  "Contact" : "Contact",
+
+  "Our Product" : "<span class='title-service1'>Our</span> <span class='title-service2'>Product</span>",
+  "View All" : "View All",
+  "Read More" : "Read More >"
 }
