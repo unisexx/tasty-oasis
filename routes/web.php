@@ -30,6 +30,10 @@ Route::get('product', 'ProductController@index');
 Route::get('product/category/{id}', 'ProductController@category');
 Route::get('product/detail/{id}', 'ProductController@detail');
 
+Route::get('skincare', 'SkincareController@index');
+Route::get('skincare/category/{id}', 'SkincareController@category');
+Route::get('skincare/detail/{id}', 'SkincareController@detail');
+
 Route::get('product-review', 'ProductReviewController@index');
 Route::get('product-review/detail/{id}', 'ProductReviewController@detail');
 

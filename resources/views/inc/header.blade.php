@@ -1,6 +1,7 @@
 @php
     $contact = App\Contact::firstOrFail();
-    $product_categories = App\ProductCategory::orderBy('id','asc')->get();
+    $product_categories = App\ProductCategory::orderBy('order','asc')->get();
+    $skincare_categories = App\SkincareCategory::orderBy('order','asc')->get();
 @endphp
 
 <section class="bg-top p-2">
@@ -58,7 +59,7 @@
                             <a class="nav-link" href="{{ url('') }}">หน้าหลัก <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">เกี่ยวกับเรา</a>
+                            <a class="nav-link" href="{{ url('about') }}">เกี่ยวกับเรา</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" onclick="location.href='surgery.html'"
@@ -71,13 +72,15 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" onclick="location.href='skincare.html'"
+                            <a class="nav-link dropdown-toggle" href="#" onclick="location.href='{{ url('skincare') }}'"
                                 id="navbar2Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 ดูแลผิวพรรณ
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbar2Dropdown">
-                                <a class="dropdown-item" href="acne.html">โปรแกรมรักษาสิว</a>
+                                @foreach ($skincare_categories as $skincare_category)
+                                    <a class="dropdown-item" href="{{ url('skincare/category/'.$skincare_category->id) }}">{{ $skincare_category->name }}</a>
+                                @endforeach
                             </div>
                         </li>
                         <li class="nav-item">

@@ -195,7 +195,7 @@ return [
     ],
 
     'additional_js' => [
-        //'js/custom.js',
+        'app-assets/js/custom.js',
     ],
 
     'googlemaps' => [
@@ -215,11 +215,11 @@ return [
         'allowed_mimetypes' => '*', //All types can be uploaded
         /*
         'allowed_mimetypes' => [
-          'image/jpeg',
-          'image/png',
-          'image/gif',
-          'image/bmp',
-          'video/mp4',
+            'image/jpeg',
+            'image/png',
+            'image/gif',
+            'image/bmp',
+            'video/mp4',
         ],
         */
         //Path for media-manager. Relative to the filesystem.
@@ -236,14 +236,14 @@ return [
             'x'              => 0,
             'y'              => 0,
             'size'           => 15,
-       ],
-       'thumbnails'          => [
-           [
+        ],
+            thumbnails'          => [
+            [
                 'type'  => 'fit',
                 'name'  => 'fit-500',
                 'width' => 500,
                 'height'=> 500
-           ],
-       ]*/
+            ],
+        ]*/
     ],
 ];
