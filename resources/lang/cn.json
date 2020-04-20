@@ -1,3 +1,38 @@
 {
-  "Home":"網頁首頁"
+  "Home":"Home",
+  "About Us" : "About Us",
+  "Surgery"  : "Surgery",
+  "Skincare" : "Skincare",
+  "Promotion": "Promotion",
+  "Product"  : "Product",
+  "Review"  : "Article & Review",
+  "Testimonial" : "Testimonial",
+  "Contact" : "Contact",
+
+  "Our Product" : "<span class='title-service1'>Our</span> <span class='title-service2'>Product</span>",
+  "HeadTestimonial" : "<span class='title-service1'>Testi</span> <span class='title-service2'>monial</span>",
+  "View All" : "View All",
+  "Read More" : "Read More >",
+  "Medical specialist":"Medical Specialist",
+  "Education":"Education",
+  "Experience":"Experience",
+  "HeadMedical specialist":"Medical<span>specialist</span>",
+  "Interesting articles":"Interesting Articles",
+  "Posted on":"Posted on",
+  "Contact us":"Contact us",
+  "SEND":"SEND",
+  "Your name":"Your name",
+  "Your email":"Your email",
+  "Your tel":"Your phone",
+  "Your message":"Your message",
+
+  "validate Your name":"This field is required.",
+  "validate Your email":"This field is required.",
+  "validate Form Your email":"The email must be a valid email address.",
+  "validate Your tel":"This field is required.",
+  "validate Your message":"This field is required.",
+
+  "Baht":"Baht",
+  "Product Review":"Product Review",
+  "Our Product2":"Our Product"
 }
