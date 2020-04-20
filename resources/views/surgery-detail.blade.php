@@ -6,8 +6,8 @@
 <div class="container">
     <nav aria-label="breadcrumb ">
         <ol class="breadcrumb breadcrumb-right-arrow d-flex justify-content-end">
-            <li class="breadcrumb-item"><a href="{{ url('') }}">หน้าแรก</a></li>
-            <li class="breadcrumb-item"><a href="{{ url('surgery') }}">ศัลยกรรมตกแต่ง</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('') }}">@lang('Home')</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('surgery') }}">@lang('Surgery')</a></li>
             <li class="breadcrumb-item active">{{ $surgery->title }}</li>
         </ol>
     </nav>

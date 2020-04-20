@@ -6,8 +6,8 @@
 <div class="container">
     <nav aria-label="breadcrumb ">
         <ol class="breadcrumb breadcrumb-right-arrow d-flex justify-content-end">
-            <li class="breadcrumb-item"><a href="{{ url('') }}">หน้าแรก</a></li>
-            <li class="breadcrumb-item">แพทย์ผู้เชี่ยวชาญ</li>
+            <li class="breadcrumb-item"><a href="{{ url('') }}">@lang('Home')</a></li>
+            <li class="breadcrumb-item">@lang('Medical specialist')</li>
             <li class="breadcrumb-item active">{{ $doctor->name }}</li>
         </ol>
     </nav>
@@ -22,11 +22,11 @@
             <img src="{{ asset('storage/'.$doctor->image) }}" alt="" class="img-fluid mb-4">
         </div>
         <div class="col-md-7 pt-3">
-            <span class="title-education">การศึกษา</span>
+            <span class="title-education">@lang('Education')</span>
             <div class="education">
                 {!! $doctor->education !!}
             </div>
-            <p class="education"><span class="title-education">ประสบการณ์ :</span>
+            <p class="education"><span class="title-education">@lang('Experience') :</span>
                 {!! $doctor->experience !!}
             </p>
         </div>

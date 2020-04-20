@@ -6,8 +6,8 @@
 <div class="container">
     <nav aria-label="breadcrumb ">
         <ol class="breadcrumb breadcrumb-right-arrow d-flex justify-content-end">
-            <li class="breadcrumb-item"><a href="{{ url('') }}">หน้าแรก</a></li>
-            <li class="breadcrumb-item active">เสียงจากลูกค้า</li>
+            <li class="breadcrumb-item"><a href="{{ url('') }}">@lang('Home')</a></li>
+            <li class="breadcrumb-item active">@lang('Testimonial')</li>
         </ol>
     </nav>
 </div>
@@ -15,7 +15,7 @@
 
 <!--############################### Content ###############################-->
 <div class="container pt-3">
-    <div class="title-page pb-5">เสียงจากลูกค้า</div>
+    <div class="title-page pb-5">@lang('Testimonial')</div>
 </div>
 
 <div class="container mt-3">

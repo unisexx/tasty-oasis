@@ -6,8 +6,8 @@
 <div class="container">
     <nav aria-label="breadcrumb ">
         <ol class="breadcrumb breadcrumb-right-arrow d-flex justify-content-end">
-            <li class="breadcrumb-item"><a href="{{ url('') }}">หน้าแรก</a></li>
-            <li class="breadcrumb-item"><a href="{{ url('skincare') }}">ดูแลผิวพรรณ</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('') }}">@lang('Home')</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('skincare') }}">@lang('Skincare')</a></li>
             <li class="breadcrumb-item active">{{ $skincare_category->name }}</li>
         </ol>
     </nav>
@@ -35,7 +35,7 @@
                             <p class="intro-acne">
                                 {{ $skincare->excerpt }}
                             </p>
-                            <a class="btn-doctor4 d-block" href="{{ url('skincare/detail/' . $skincare->id) }}" role="button">อ่านเพิ่มเติม ></a>
+                            <a class="btn-doctor4 d-block" href="{{ url('skincare/detail/' . $skincare->id) }}" role="button">@lang('Read More')</a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <p class="intro-acne">
                             {{ $skincare->excerpt }}
                         </p>
-                        <a class="btn-doctor4 d-block mb-2" href="{{ url('skincare/detail/' . $skincare->id) }}" role="button">อ่านเพิ่มเติม ></a>
+                        <a class="btn-doctor4 d-block mb-2" href="{{ url('skincare/detail/' . $skincare->id) }}" role="button">@lang('Read More')</a>
                     </div>
                 </div>
                 <div class="col-md-6">

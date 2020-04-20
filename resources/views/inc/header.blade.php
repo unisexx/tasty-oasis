@@ -107,7 +107,9 @@
                             <a class="nav-link" href="{{ url('promotion') }}">@lang('Promotion')</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" 
+                            onclick="location.href='{{ url('product') }}'"
+                            id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 @lang('Product')
                             </a>
@@ -123,8 +125,8 @@
                                 @lang('Review')
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ url('article') }}">บทความที่น่าสนใจ</a>
-                                <a class="dropdown-item" href="{{ url('product-review') }}">รีวิวสินค้า</a>
+                                <a class="dropdown-item" href="{{ url('article') }}">@lang('Interesting articles')</a>
+                                <a class="dropdown-item" href="{{ url('product-review') }}">@lang('Product Review')</a>
                             </div>
                         </li>
                         <li class="nav-item">

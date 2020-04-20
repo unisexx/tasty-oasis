@@ -6,8 +6,8 @@
 <div class="container">
     <nav aria-label="breadcrumb ">
         <ol class="breadcrumb breadcrumb-right-arrow d-flex justify-content-end">
-            <li class="breadcrumb-item"><a href="{{ url('') }}">หน้าแรก</a></li>
-            <li class="breadcrumb-item active">ศัลยกรรมตกแต่ง</li>
+            <li class="breadcrumb-item"><a href="{{ url('') }}">@lang('Home')</a></li>
+            <li class="breadcrumb-item active">@lang('Surgery')</li>
         </ol>
     </nav>
 </div>
@@ -15,7 +15,7 @@
 
 <!--############################### Content ###############################-->
 <div class="container pt-3">
-    <div class="title-page pb-5">ศัลยกรรมตกแต่ง</div>
+    <div class="title-page pb-5">@lang('Surgery')</div>
 </div>
 
 @foreach($surgeries as $key => $surgery)
@@ -32,7 +32,7 @@
                     <p class="intro-surgery text-center">
                         {{ $surgery->excerpt }}
                     </p>
-                    <a class="btn-doctor2 mx-auto d-block" href="{{ url('surgery/detail/'. $surgery->id) }}" role="button">อ่านเพิ่มเติม ></a>
+                    <a class="btn-doctor2 mx-auto d-block" href="{{ url('surgery/detail/'. $surgery->id) }}" role="button">@lang('Read More')</a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                         <p class="intro-surgery text-center">
                             {{ $surgery->excerpt }}
                         </p>
-                        <a class="btn-doctor2 mx-auto d-block" href="#" role="button">อ่านเพิ่มเติม ></a>
+                        <a class="btn-doctor2 mx-auto d-block" href="#" role="button">@lang('Read More')</a>
                     </div>
                     <div class="col-md-6">
                         <img src="{{ asset('storage/'.$surgery->image) }}" alt="" class="img-fluid">

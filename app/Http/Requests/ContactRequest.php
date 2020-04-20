@@ -34,11 +34,11 @@ class ContactRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required'    => 'ชื่อ-สกุล ห้ามเป็นค่าว่าง',
-            'email.required'   => 'อีเมล์ ห้ามเป็นค่าว่าง',
-            'email.email'      => 'รูปแบบอีเมล์ไม่ถูกต้อง',
-            'tel.required'     => 'เบอร์โทรศัพท์ ห้ามเป็นค่าว่าง',
-            'message.required' => 'ข้อมูลที่ต้องการสอบถาม ห้ามเป็นค่าว่าง',
+            'name.required'    => trans('validate Your name'),
+            'email.required'   => trans('validate Your email'),
+            'email.email'      => trans('validate Form Your email'),
+            'tel.required'     => trans('validate Your tel'),
+            'message.required' => trans('validate Your message'),
         ];
     }
 

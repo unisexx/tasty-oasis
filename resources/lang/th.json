@@ -10,6 +10,30 @@
   "Contact" : "ติดต่อเรา",
 
   "Our Product" : "<span class='title-service1'>สินค้า</span> <span class='title-service2'>ของเรา</span>",
+  "HeadTestimonial" : "<span class='title-service1'>เสียงจาก</span> <span class='title-service2'>ลูกค้า</span>",
   "View All" : "ดูทั้งหมด",
-  "Read More" : "อ่านเพิ่มเติม >"
+  "Read More" : "อ่านเพิ่มเติม >",
+  "Medical specialist":"แพทย์ผู้เชี่ยวชาญ",
+  "Education":"การศึกษา",
+  "Experience":"ประสบการณ์",
+  "HeadMedical specialist":"แพทย์<span>ผู้เชี่ยวชาญ</span>",
+  "Interesting articles":"บทความที่น่าสนใจ",
+  "Posted on":"โพสต์เมื่อ",
+  "Contact us":"ส่งข้อความถึงเรา",
+  "SEND":"ส่งข้อความ",
+
+  "Your name":"ชื่อ-สกุล",
+  "Your email":"อีเมล",
+  "Your tel":"เบอร์โทรศัพท์",
+  "Your message":"ข้อมูลที่ต้องการสอบถาม",
+  "validate Your name":"ชื่อ-สกุล ห้ามเป็นค่าว่าง",
+  "validate Your email":"อีเมล์ ห้ามเป็นค่าว่าง",
+  "validate Form Your email":"รูปแบบอีเมล์ไม่ถูกต้อง",
+  "validate Your tel":"เบอร์โทรศัพท์ ห้ามเป็นค่าว่าง",
+  "validate Your message":"ข้อมูลที่ต้องการสอบถาม ห้ามเป็นค่าว่าง",
+
+  "Baht":"บาท",
+  "Product Review":"รีวิวสินค้า",
+  "Our Product2":"สินค้าของเรา"
+
 }

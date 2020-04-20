@@ -81,7 +81,7 @@
                     <div class="view overlay">
                         <img src="{{ asset('storage/'.$product->image) }}" class="img-fluid" alt="smaple image">
                         <div class="mask flex-center rgba-red-strong">
-                            <a class="more-text" href="{{ url('product-review/detail/'.$product->id) }}">อ่านเพิ่มเติม ></a>
+                            <a class="more-text" href="{{ url('product-review/detail/'.$product->id) }}">@lang('Read More')</a>
                         </div>
                     </div>
                     <div class="card-service">
@@ -103,8 +103,7 @@
 
 <!--############################### testimonial ###############################-->
 <div class="testimonial mt-8">
-    <div class="text-center"><span class="title-service1">เสียงจาก</span> <span class="title-service2">ลูกค้า</span>
-    </div>
+    <div class="text-center">@lang('HeadTestimonial')</div>
     <div class="container mt-3">
         <div class="row justify-content-center">
             @foreach($testimonials as $testimonial)
@@ -132,13 +131,13 @@
     <div class="container">
         <div class="row pt-5">
             <div class="col-md-6">
-                <div class="title-doctor">แพทย์ผู้เชี่ยวชาญ</div>
+                <div class="title-doctor">@lang('Medical specialist')</div>
                 <p class="name-doctor">{{ $doctor->name }}</p>
-                <span class="title-education">การศึกษา</span>
+                <span class="title-education">@lang('Education')</span>
                 <div class="education">
                     {!! $doctor->education !!}
                 </div>
-                <p class="education"><span class="title-education">ประสบการณ์ :</span> 
+                <p class="education"><span class="title-education">@lang('Experience') :</span> 
                     {!! $doctor->experience !!}
                 </p>
                 <a class="btn-doctor" href="{{ url('doctor/profile/'. $doctor->id) }}">@lang('Read More')</a>

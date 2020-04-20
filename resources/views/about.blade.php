@@ -6,8 +6,8 @@
 <div class="container">
     <nav aria-label="breadcrumb ">
         <ol class="breadcrumb breadcrumb-right-arrow d-flex justify-content-end">
-            <li class="breadcrumb-item"><a href="{{ url('') }}">หน้าแรก</a></li>
-            <li class="breadcrumb-item active">เกี่ยวกับเรา</li>
+            <li class="breadcrumb-item"><a href="{{ url('') }}">@lang('Home')</a></li>
+            <li class="breadcrumb-item active">@lang('About Us')</li>
         </ol>
     </nav>
 </div>
@@ -15,13 +15,13 @@
 
 <!--############################### Content ###############################-->
 <div class="container pb-5 pt-3">
-    <div class="title-page pb-5">เกี่ยวกับเรา</div>
+    <div class="title-page pb-5">@lang('About Us')</div>
     {!! $about->body !!}
     
     <!--doctor-->
     <hr class="line-about mt-5 mb-5">
     <div class="why">
-        แพทย์<span>ผู้เชี่ยวชาญ</span><br>
+        @lang('HeadMedical specialist')<br>
         <img src="{{ asset('app-assets/images/line-art.png') }}" alt="">
     </div>
     <div class="row justify-content-center mt-5 mb-5">
@@ -32,7 +32,7 @@
                 </div>
                 <p class="name-doctor2">{{ $doctor->name }}</p>
                 <p>{{ $doctor->position }}</p>
-                <a href="{{ url('doctor/profile/'. $doctor->id) }}" class="btn-doctor3 mx-auto d-block">อ่านเพิ่มเติม ></a>
+                <a href="{{ url('doctor/profile/'. $doctor->id) }}" class="btn-doctor3 mx-auto d-block">@lang('Read More')</a>
             </div>
         @endforeach
     </div>
