@@ -22,6 +22,9 @@
 @foreach($testimonials->chunk(4) as $key => $chunk)
     <div class="row justify-content-center {{ $key != 0 ? 'mt-5' : '' }}">
         @foreach($chunk as $testimonial)
+            @php
+                $testimonial = $testimonial->translate(App::getLocale());
+            @endphp
             <div class="col-md-3 card noborder text-center">
                 <div class="size-img mb-3">
                     <img src="{{ asset('storage/'.$testimonial->image) }}" alt="" class="rounded-circle img-fluid ">

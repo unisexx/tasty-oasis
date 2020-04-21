@@ -12,8 +12,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $contact = Contact::with('translations')->firstOrFail();
-        $contact = $contact->translate(App::getLocale(), 'th');
+        $contact = Contact::with('translations')->firstOrFail()->translate(App::getLocale());
         return view('contact', compact('contact'));
     }
 

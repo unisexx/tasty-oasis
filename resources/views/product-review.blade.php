@@ -22,6 +22,9 @@
 <div class="container mb-5">
     <div class="row">
         @foreach($products as $key => $product)
+        @php
+            $product = $product->translate(App::getLocale());
+        @endphp
         <div class="col-md-4">
             <div class="card">
                 <img class="card-img-top" src="{{ asset('storage/'.$product->image) }}" alt="{{ $product->title }}">
@@ -37,7 +40,6 @@
 </div>
 
 {!! $products->appends(@$_GET)->render() !!}
-
 <!--############################### Content ###############################-->
 
 @endsection

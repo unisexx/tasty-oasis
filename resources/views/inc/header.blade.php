@@ -1,8 +1,8 @@
 @php
-    $contact = App\Contact::firstOrFail();
-    $surgeries = App\Surgery::where('status', 1)->orderBy('order','asc')->get();
-    $product_categories = App\ProductCategory::orderBy('order','asc')->get();
-    $skincare_categories = App\SkincareCategory::orderBy('order','asc')->get();
+    $contact = App\Contact::firstOrFail()->translate(App::getLocale());
+    $surgeries = App\Surgery::where('status', 1)->orderBy('order','asc')->get()->translate(App::getLocale());
+    $product_categories = App\ProductCategory::with('translations')->orderBy('order','asc')->get()->translate(App::getLocale());
+    $skincare_categories = App\SkincareCategory::orderBy('order','asc')->get()->translate(App::getLocale());
 @endphp
 
 <section class="bg-top p-2">

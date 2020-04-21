@@ -30,8 +30,8 @@
                 <div class="doctor-size-img">
                     <img src="{{Voyager::image($doctor->thumbnail('cropped'))}}" alt="" class="rounded-circle img-fluid">
                 </div>
-                <p class="name-doctor2">{{ $doctor->name }}</p>
-                <p>{{ $doctor->position }}</p>
+                <p class="name-doctor2">{{ $doctor->getTranslatedAttribute('name') }}</p>
+                <p>{{ $doctor->getTranslatedAttribute('position') }}</p>
                 <a href="{{ url('doctor/profile/'. $doctor->id) }}" class="btn-doctor3 mx-auto d-block">@lang('Read More')</a>
             </div>
         @endforeach

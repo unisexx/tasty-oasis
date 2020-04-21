@@ -20,6 +20,9 @@
 </div>
 <div class="container pt-2">
     @foreach($articles as $key => $article)
+    @php
+        $article = $article->translate(App::getLocale());
+    @endphp
     <div class="row text-center {{ $key != 0 ? 'mt-4' : '' }}">
         <div class="col-md-12">
             <img src="{{ asset('storage/'.$article->image) }}" alt="" class="img-fluid">
@@ -36,7 +39,6 @@
 
 
 {!! $articles->appends(@$_GET)->render() !!}
-
 <!--############################### Content ###############################-->
 
 @endsection

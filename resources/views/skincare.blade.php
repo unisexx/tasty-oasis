@@ -19,6 +19,10 @@
 </div>
 
 @foreach($skincare_categories as $key => $skincare_category)
+    @php
+        $skincare_category = $skincare_category->translate(App::getLocale());
+    @endphp
+
     @if($loop->iteration  % 2 == 0)
 
         <div class="bg-gray mt-5 mb-5">

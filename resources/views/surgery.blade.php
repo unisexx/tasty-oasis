@@ -19,6 +19,10 @@
 </div>
 
 @foreach($surgeries as $key => $surgery)
+    @php
+        $surgery = $surgery->translate(App::getLocale());
+    @endphp
+
     @if($loop->iteration  % 2 != 0)
 
         <div class="container pb-4 @if($loop->last) pb-5 mb-5 @endif">

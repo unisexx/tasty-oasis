@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\SkincareCategory;
 use App\Skincare;
+use App;
 
 class SkincareController extends Controller
 {
@@ -15,14 +16,14 @@ class SkincareController extends Controller
 
     public function category($id)
     {
-        $skincare_category = SkincareCategory::findOrFail($id);
+        $skincare_category = SkincareCategory::findOrFail($id)->translate(App::getLocale());
         $skincares = Skincare::where('skincare_category_id', $id)->where('status', 1)->orderBy('id','desc')->paginate(3);
         return view('skincare-category', compact('skincare_category', 'skincares'));
     }
 
     public function detail($id)
     {
-        $skincare = Skincare::findOrFail($id);
+        $skincare = Skincare::findOrFail($id)->translate(App::getLocale());
         return view('skincare-detail', compact('skincare'));
     }
 }

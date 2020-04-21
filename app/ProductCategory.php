@@ -3,11 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class ProductCategory extends Model
 {
-    // public function product()
-    // {
-    //     return $this->hasMany('App\Product')->orderBy('id', 'desc');
-    // }
+    use Translatable;
+    protected $translatable = ['name'];
 }

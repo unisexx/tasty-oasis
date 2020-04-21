@@ -19,6 +19,9 @@
 </div>
 <div class="container">
     @foreach($products as $product)
+    @php
+        $product = $product->translate(App::getLocale());
+    @endphp
     <div class="row">
         <div class="col-md-4">
             <img src="{{ asset('storage/'.$product->image) }}" alt="" class="img-fluid">

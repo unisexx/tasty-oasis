@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Surgery;
+use App;
 
 class SurgeryController extends Controller
 {
@@ -13,7 +14,7 @@ class SurgeryController extends Controller
     }
 
     public function detail($id){
-        $surgery = Surgery::findOrFail($id);
+        $surgery = Surgery::findOrFail($id)->translate(App::getLocale());
         return view('surgery-detail', compact('surgery'));
     }
 }
