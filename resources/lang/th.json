@@ -34,6 +34,14 @@
 
   "Baht":"บาท",
   "Product Review":"รีวิวสินค้า",
-  "Our Product2":"สินค้าของเรา"
+  "Our Product2":"สินค้าของเรา",
+
+  "Search":"ค้นหา",
+  "Doctors":"แพทย์ผู้เชี่ยวชาญ",
+  "Surgeries":"ศัลยกรรมตกแต่ง",
+  "Articles":"บทความ",
+  "Skincares":"ดูแลผิวพรรณ",
+  "Promotions":"โปรโมชั่น",
+  "Products":"สินค้า"
 
 }

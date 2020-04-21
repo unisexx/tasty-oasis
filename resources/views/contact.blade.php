@@ -44,7 +44,7 @@
         <div class="row">
             <div class="title-contact">@lang('Contact us')</div>
             <div class="col-md-12">
-                <form class="login100-form validate-form" method="post" action="contact/save">
+                <form class="login100-form validate-form" method="post" action="{{ url('contact/save') }}">
                     {{ csrf_field() }}
                     <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="@lang('validate Your name')">
                         <input type="text" class="input100" name="name">

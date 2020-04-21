@@ -27,10 +27,12 @@ Route::get('change/{locale}', function ($locale) {
 
 Route::get('/', 'HomeController@index');
 
+Route::get('search', 'HomeController@search');
+
 Route::get('about', 'AboutController@index');
 
 Route::get('surgery', 'SurgeryController@index');
-Route::get('surgery/detail/{id}', 'SurgeryController@detail');
+Route::get('surgery/detail/{id}', 'SurgeryController@detail')->name('surgery.detail');
 
 Route::get('product', 'ProductController@index');
 Route::get('product/category/{id}', 'ProductController@category');
@@ -38,20 +40,20 @@ Route::get('product/detail/{id}', 'ProductController@detail');
 
 Route::get('skincare', 'SkincareController@index');
 Route::get('skincare/category/{id}', 'SkincareController@category');
-Route::get('skincare/detail/{id}', 'SkincareController@detail');
+Route::get('skincare/detail/{id}', 'SkincareController@detail')->name('skincare.detail');
 
 Route::get('product-review', 'ProductReviewController@index');
-Route::get('product-review/detail/{id}', 'ProductReviewController@detail');
+Route::get('product-review/detail/{id}', 'ProductReviewController@detail')->name('product-review.detail');
 
 Route::get('article', 'ArticleController@index');
-Route::get('article/detail/{id}', 'ArticleController@detail');
+Route::get('article/detail/{id}', 'ArticleController@detail')->name('article.detail');
 
 Route::get('testimonial', 'TestimonialController@index');
 
-Route::get('doctor/profile/{id}', 'DoctorController@profile');
+Route::get('doctor/profile/{id}', 'DoctorController@profile')->name('doctor.profile');;
 
 Route::get('promotion', 'PromotionController@index');
-Route::get('promotion/detail/{id}', 'PromotionController@detail');
+Route::get('promotion/detail/{id}', 'PromotionController@detail')->name('promotion.detail');
 
 Route::get('contact', 'ContactController@index');
 Route::post('contact/save', 'ContactController@save');

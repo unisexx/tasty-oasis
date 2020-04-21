@@ -7,7 +7,12 @@ use App\Hilight;
 use App\Testimonial;
 use App\Doctor;
 use App\Product;
+use App\Surgery;
+use App\Skincare;
+use App\Promotion;
+use App\Article;
 use App;
+use Spatie\Searchable\Search;
 
 class HomeController extends Controller
 {
@@ -19,5 +24,19 @@ class HomeController extends Controller
         $doctor = Doctor::where('status', 1)->orderBy('id', 'desc')->firstOrFail()->translate(App::getLocale());
         
         return view('home', compact('hilights', 'products', 'testimonials', 'doctor'));
+    }
+
+    public function search(Request $request)
+    {
+        $searchResults = (new Search())
+            ->registerModel(Doctor::class, 'name', 'position', 'education', 'experience')
+            ->registerModel(Surgery::class, 'title', 'excerpt', 'body')
+            ->registerModel(Skincare::class, 'name', 'excerpt', 'body')
+            ->registerModel(Promotion::class, 'title', 'body')
+            ->registerModel(Product::class, 'name', 'body', 'review')
+            ->registerModel(Article::class, 'title', 'excerpt', 'body')
+            ->perform($request->input('search'));
+
+        return view('search', compact('searchResults'));
     }
 }

@@ -54,10 +54,10 @@
                 </nav>
             </div>
             <div class="col-md-3 my-auto">
-                <form class="form-inline my-2 my-lg-0 ml-3">
+                <form class="form-inline my-2 my-lg-0 ml-3" method="GET" action="{{ url('search') }}">
+                    {{ csrf_field() }}
                     <i class="fa fa-search h1 text-muted mt-1"></i>
-                    <input class="form-control border-0 bg-transparent w-85" type="search" placeholder="SEARCH"
-                        aria-label="Search">
+                    <input name="search" class="form-control border-0 bg-transparent w-85" type="text" placeholder="SEARCH" aria-label="Search" value="{{ @$_GET['search'] }}">
                 </form>
             </div>
         </div>
