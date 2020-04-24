@@ -17,6 +17,12 @@ class AppServiceProvider extends ServiceProvider
         foreach (glob(app_path() . '/Helpers/*.php') as $filename) {
             require_once($filename);
         }
+
+        // ตั้งค่า public folder path ใหม่ เพื่อทำ store link เนื่องจาก default ของ laravel ใช้ชื่อ public โฟล์เดอร์
+        // ตั้งค่าแล้วรันคำสั่ง php artisan storage:link
+        // $this->app->bind('path.public', function() {
+        //     return base_path('../public_html/oasis');
+        // });
     }
 
     /**
