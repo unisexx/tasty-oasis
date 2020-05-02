@@ -12,6 +12,7 @@
                 <ul class="list-unstyled list-group list-group-horizontal align-items-center">
                     <li class="p-2"><a href="{{ $contact->facebook }}"><img src="{{ asset('app-assets/images/icon-facebook.png') }}" alt=""></a></li>
                     <li class="p-2"><a href="{{ $contact->twitter }}"><img src="{{ asset('app-assets/images/icon-twitter.png') }}" alt=""></a></li>
+                    <li class="p-2"><a href="{{ $contact->line }}"><img src="{{ asset('app-assets/images/line_ico.png') }}" alt=""></a></li>
                     <li class="p-3"><img src="{{ asset('app-assets/images/icon-phone.png') }}" alt=""> <span class="space-font">{{ $contact->tel }}</span>
                     </li>
                 </ul>
