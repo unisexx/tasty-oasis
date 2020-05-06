@@ -84,6 +84,17 @@
                             <a class="nav-link dropdown-toggle" href="#" onclick="location.href='{{ url('surgery') }}'"
                                 id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
+                                @lang('Service')
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url('surgery') }}">@lang('Surgery')</a>
+                                <a class="dropdown-item" href="{{ url('skincare') }}">@lang('Skincare')</a>
+                            </div>
+                        </li>
+                        {{-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" onclick="location.href='{{ url('surgery') }}'"
+                                id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
                                 @lang('Surgery')
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -103,7 +114,7 @@
                                     <a class="dropdown-item" href="{{ url('skincare/category/'.$skincare_category->id) }}">{{ $skincare_category->name }}</a>
                                 @endforeach
                             </div>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('promotion') }}">@lang('Promotion')</a>
                         </li>

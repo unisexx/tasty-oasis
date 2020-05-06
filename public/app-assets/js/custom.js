@@ -13,8 +13,9 @@ function tinymce_init_callback(editor)
         external_plugins: {
             'visualblocks': 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.9.4/plugins/visualblocks/plugin.min.js',
             'hr': 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.9.4/plugins/hr/plugin.min.js',
+            'youtube' : '/app-assets/tinymce/youtube/plugin.js',
         },
-        plugins: 'link, image, code, table, textcolor, lists, hr, visualblocks',
+        plugins: 'link, image, code, table, textcolor, lists, hr, visualblocks, youtube',
         // valid_elements : '*[*]',
         extended_valid_elements : 'br[clear],i[class]',
         file_browser_callback: function(field_name, url, type, win) {
@@ -22,7 +23,8 @@ function tinymce_init_callback(editor)
                     $('#upload_file').trigger('click');
                 }
             },
-        toolbar: 'styleselect bold italic underline | forecolor backcolor | alignleft aligncenter alignright | bullist numlist outdent indent | link image table | visualblocks | hr  ClearFloat Accordion DivBlock | code',
+        toolbar1: 'styleselect bold italic underline | forecolor backcolor | alignleft aligncenter alignright | bullist numlist outdent indent',
+        toolbar2: 'link image table | visualblocks | hr  ClearFloat Accordion DivBlock | code | youtube',
         convert_urls: false,
         image_caption: true,
         image_title: true,
@@ -54,7 +56,7 @@ function tinymce_init_callback(editor)
         //     { title: 'Image Right', selector: 'img', styles: { 'float': 'right', 'margin': '0 0 10px 10px' } },
         //     ] }
         // ],
-        visualblocks_default_state: true,
+        visualblocks_default_state: false,
         end_container_on_empty_block: true,
         setup: function (editor) {
 

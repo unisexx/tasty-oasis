@@ -42,5 +42,6 @@
   "Articles":"Article",
   "Skincares":"Skincare",
   "Promotions":"Promotion",
-  "Products":"Product"
+  "Products":"Product",
+  "Service" : "Service"
 }
