@@ -1,6 +1,7 @@
 @php
     $contact = App\Contact::firstOrFail()->translate(App::getLocale());
     $surgeries = App\Surgery::where('status', 1)->orderBy('order','asc')->get()->translate(App::getLocale());
+    $service_categories = App\ServiceCategory::orderBy('order','asc')->get()->translate(App::getLocale());
     $product_categories = App\ProductCategory::with('translations')->orderBy('order','asc')->get()->translate(App::getLocale());
     $skincare_categories = App\SkincareCategory::orderBy('order','asc')->get()->translate(App::getLocale());
 @endphp
@@ -81,14 +82,17 @@
                             <a class="nav-link" href="{{ url('about') }}">@lang('About Us')</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" onclick="location.href='{{ url('surgery') }}'"
+                            <a class="nav-link dropdown-toggle" href="#"
                                 id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 @lang('Service')
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ url('surgery') }}">@lang('Surgery')</a>
-                                <a class="dropdown-item" href="{{ url('skincare') }}">@lang('Skincare')</a>
+                                {{-- <a class="dropdown-item" href="{{ url('surgery') }}">@lang('Surgery')</a>
+                                <a class="dropdown-item" href="{{ url('skincare') }}">@lang('Skincare')</a> --}}
+                                @foreach($service_categories as $service_category)
+                                <a class="dropdown-item" href="{{ url('service/category/'.$service_category->id) }}">{{ $service_category->name }}</a>
+                                @endforeach
                             </div>
                         </li>
                         {{-- <li class="nav-item dropdown">
@@ -120,7 +124,6 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" 
-                            onclick="location.href='{{ url('product') }}'"
                             id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 @lang('Product')

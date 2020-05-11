@@ -28,10 +28,10 @@
         <div class="bg-gray mt-5 mb-5">
             <div class="container pb-4">
                 <div class="row bg-dot">
-                    <div class="col-md-6">
+                    <div class="col-md-6 second">
                         <img src="{{ asset('storage/'.$skincare_category->image) }}" alt="" class="img-fluid">
                     </div>
-                    <div class="col-md-6 my-auto position-relative">
+                    <div class="col-md-6 my-auto position-relative first">
                         <div class="title-acne">{{ $skincare_category->name }}</div>
                         <img src="{{ asset('app-assets/images/line-acne.jpg') }}" alt="" class="line-acne2">
                         <div class="col-md-10 mx-auto">

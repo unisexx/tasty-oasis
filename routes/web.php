@@ -34,6 +34,9 @@ Route::get('about', 'AboutController@index');
 Route::get('surgery', 'SurgeryController@index');
 Route::get('surgery/detail/{id}', 'SurgeryController@detail')->name('surgery.detail');
 
+Route::get('service/category/{id}', 'ServiceController@category');
+Route::get('service/detail/{id}', 'ServiceController@detail');
+
 Route::get('product', 'ProductController@index');
 Route::get('product/category/{id}', 'ProductController@category');
 Route::get('product/detail/{id}', 'ProductController@detail');

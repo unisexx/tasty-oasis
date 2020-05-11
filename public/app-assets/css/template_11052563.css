@@ -385,17 +385,3 @@ textarea {    min-height: 150px;}
 .list-style-pink-arrow li a:hover{color: #333;}
 
 
-@media only screen and (max-width: 768px) {
-  .first {
-      order: 1;
-  }
-  .second {
-      order: 2;
-  }
-  .third {
-      order: 3;
-  }
-  .fourth {
-      order: 4;
-  }
-}
