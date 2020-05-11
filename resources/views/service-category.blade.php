@@ -16,7 +16,7 @@
 
 <!--############################### Content ###############################-->
 <div class="container pt-3">
-    <div class="title-page pb-5">@lang('Surgery')</div>
+    <div class="title-page pb-5">{{ $service_category->name }}</div>
 </div>
 
 @foreach($services as $key => $service)
