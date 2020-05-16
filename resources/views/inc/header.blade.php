@@ -11,12 +11,12 @@
         <div class="row">
             <div class="col-md-3 my-auto">
                 <ul class="list-unstyled list-group list-group-horizontal align-items-center">
-                    <li class="p-2"><a href="{{ $contact->facebook }}"><img src="{{ asset('app-assets/images/icon-facebook.png') }}" alt=""></a></li>
-                    <li class="p-2"><a href="{{ $contact->twitter }}"><img src="{{ asset('app-assets/images/icon-twitter.png') }}" alt=""></a></li>
-                    <li class="p-2"><a href="{{ $contact->line }}"><img src="{{ asset('app-assets/images/line_ico.png') }}" alt=""></a></li>
-                    <li class="p-3"><img src="{{ asset('app-assets/images/icon-phone.png') }}" alt=""> <span class="space-font">{{ $contact->tel }}</span>
-                    </li>
+                    <li class="p-2"><a href="{{ $contact->facebook }}"><img src="{{ asset('app-assets/images/icon-facebook.png') }}" alt="" width="32"></a></li>
+                    <li class="p-2"><a href="{{ $contact->twitter }}"><img src="{{ asset('app-assets/images/icon-twitter.png') }}" alt="" width="32"></a></li>
+                    <li class="p-2"><a href="{{ $contact->line }}"><img src="{{ asset('app-assets/images/line_ico.png') }}" alt="" width="32"></a></li>
+                    <li class="p-2"><a href="{{ $contact->instagram }}"><img src="{{ asset('app-assets/images/icon-instagram.png') }}" alt="" width="32"></a></li>
                 </ul>
+                <div><img src="{{ asset('app-assets/images/icon-phone.png') }}" alt="" class="ml-3"> <span class="space-font">{{ $contact->tel }}</span></div>
             </div>
             <div class="col-md-6 text-center">
                 <img src="{{ asset('app-assets/images/logo.png') }}" alt="">
