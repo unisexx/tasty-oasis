@@ -11,6 +11,7 @@ use App\Surgery;
 use App\Skincare;
 use App\Promotion;
 use App\Article;
+use App\HomeService;
 use App;
 use Spatie\Searchable\Search;
 
@@ -19,11 +20,12 @@ class HomeController extends Controller
     public function index()
     {
         $hilights = Hilight::where('status', 1)->orderBy('order', 'asc')->get();
+        $home_service = HomeService::findOrFail(1)->translate(App::getLocale());
         $products = Product::where('status', 1)->orderBy('id', 'desc')->take(3)->get()->translate(App::getLocale());
         $testimonials = Testimonial::where('status', 1)->orderBy('id', 'desc')->take(3)->get()->translate(App::getLocale());
         $doctor = Doctor::where('status', 1)->orderBy('id', 'desc')->firstOrFail()->translate(App::getLocale());
         
-        return view('home', compact('hilights', 'products', 'testimonials', 'doctor'));
+        return view('home', compact('hilights', 'products', 'testimonials', 'doctor', 'home_service'));
     }
 
     public function search(Request $request)
