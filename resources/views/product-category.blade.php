@@ -32,7 +32,7 @@
             <p class="intro">{{ $product->body }}</p>
             <p class="prize">{{ @number_format($product->price, 2) }} @lang('Baht')</p>
             
-            @if(isset($product->review))
+            @if(@$product->review)
                 <a href="{{ url('product-review/detail/'.$product->id) }}" type="button" class="btn btn-light">@lang('Product Review')</a>
             @endif
         </div>
